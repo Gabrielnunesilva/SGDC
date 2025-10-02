@@ -1,0 +1,564 @@
+/* -------------------- Geral -------------------- */
+#areaConteudo {
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Cabeçalho das telas (botão adicionar, filtros, etc.) */
+.desbravadores-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.desbravadores-header button,
+.desbravadores-header select {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #00796b;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.desbravadores-header button:hover,
+.desbravadores-header select:hover {
+  background-color: #004d40;
+  border-color: #004d40;
+}
+
+/* -------------------- Lista de Itens -------------------- */
+.desbravador-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  font-size: 14px;
+  margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.desbravador-item span {
+  font-weight: 500;
+}
+
+.desbravador-item button {
+  margin-left: 10px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #00796b;
+  color: white;
+  transition: 0.2s;
+}
+
+.desbravador-item button:hover {
+  background-color: #004d40;
+}
+
+/* -------------------- Formulários -------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+  font-weight: 500;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form textarea {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Botões dentro do formulário */
+.botoes-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.botoes-form button[type="submit"] {
+  background-color: #00796b;
+  color: white;
+}
+
+.botoes-form button[type="submit"]:hover {
+  background-color: #004d40;
+}
+
+.botoes-form button#btnCancelar,
+.botoes-form button#btnCancelarPatrimonio,
+.botoes-form button#btnCancelarUnidade,
+.botoes-form button#btnCancelarClasse,
+.botoes-form button#btnCancelarEspecialidade {
+  background-color: #aaa;
+  color: white;
+}
+
+.botoes-form button#btnCancelar:hover {
+  background-color: #888;
+}
+
+.botoes-form button#btnExcluir,
+.botoes-form button#btnExcluirPlano,
+.botoes-form button#btnExcluirUnidade,
+.botoes-form button#btnExcluirClasse,
+.botoes-form button#btnExcluirEspecialidade {
+  background-color: #e53935;
+  color: white;
+}
+
+.botoes-form button#btnExcluir:hover {
+  background-color: #b71c1c;
+}
+
+/* -------------------- Subitens / Indentação -------------------- */
+.subitem {
+  margin-left: 20px;
+  background-color: #eaeaea;
+}
+
+/* -------------------- Diferenciação Receita / Despesa -------------------- */
+.receita {
+  background-color: #d0f0c0;
+}
+
+.receita.subitem {
+  background-color: #e6f6dc;
+}
+
+.despesa {
+  background-color: #f9d0d0;
+}
+
+.despesa.subitem {
+  background-color: #fce5e5;
+}
+
+/* -------------------- Formulários grandes (descrição) -------------------- */
+.textarea-grande {
+  min-height: 100px;
+}
+
+/* -------------------- Detalhes do Patrimônio -------------------- */
+#listaPatrimonios span {
+  margin-right: 15px;
+  display: inline-block;
+}
+
+/* -------------------- Botão expandir/colapsar (+/-) -------------------- */
+.btn-toggle {
+  margin-left: 10px;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #00796b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-toggle:hover {
+  background-color: #004d40;
+}
+
+/* -------------------- Filtros  -------------------- */
+
+#filtroStatus {
+  background-color: #00796b; /* verde padrão */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#filtroStatus option {
+  color: black; /* mantém o texto legível */
+}
+
+.financeiro-header select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.financeiro-header select:hover {
+  background-color: #e0f2f1;
+  border-color: #00796b;
+}
+
+
+.financeiro-header select {
+  appearance: none; /* remove estilo padrão */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="12" viewBox="0 0 24 24" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px; /* espaço para o ícone */
+}
+
+/* ============================= */
+/* Desbravadores */
+.relatorio-desbravadores {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.relatorio-desbravadores .linha-header,
+.relatorio-desbravadores .linha-dado {
+  display: flex;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.relatorio-desbravadores .linha-header {
+  font-weight: bold;
+  background-color: #00796b;
+  color: white;
+}
+
+.relatorio-desbravadores .linha-dado {
+  background-color: #f5f5f5;
+}
+
+.relatorio-desbravadores .linha-dado:nth-child(even) {
+  background-color: #e0f2f1;
+}
+
+.relatorio-desbravadores span {
+  flex: 1; /* todas as colunas com mesma largura */
+  text-align: left;
+}
+
+.col-nome { flex: 2; } /* Nome mais largo */
+.col-rg, .col-cpf, .col-unidade { flex: 1; }
+
+
+/* ============================= */
+/* Relatório de Unidades */
+.relatorio-unidades {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.relatorio-unidades .linha-header,
+.relatorio-unidades .linha-dado {
+  display: flex;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.relatorio-unidades .linha-header {
+  font-weight: bold;
+  background-color: #00796b;
+  color: white;
+}
+
+.relatorio-unidades .linha-dado {
+  background-color: #f5f5f5;
+}
+
+.relatorio-unidades .linha-dado:nth-child(even) {
+  background-color: #e0f2f1;
+}
+
+.relatorio-unidades span {
+  flex: 1;
+  text-align: left;
+}
+
+.col-unidade { flex: 2; }
+.col-quantidade { flex: 1; text-align: center; }
+
+
+
+/* ============================= */
+/* Relatório de Especialidades */
+.relatorio-especialidades {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.relatorio-especialidades .linha-header,
+.relatorio-especialidades .linha-dado {
+  display: flex;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.relatorio-especialidades .linha-header {
+  font-weight: bold;
+  background-color: #00796b;
+  color: white;
+}
+
+.relatorio-especialidades .linha-dado {
+  background-color: #f5f5f5;
+}
+
+.relatorio-especialidades .linha-dado:nth-child(even) {
+  background-color: #e0f2f1;
+}
+
+.relatorio-especialidades span {
+  flex: 1;
+  text-align: left;
+}
+
+.col-especialidade { flex: 2; }
+.col-quantidade { flex: 1; text-align: center; }
+
+
+/* ============================= */
+/* Relatório de Classes */
+.relatorio-classes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.relatorio-classes .linha-header,
+.relatorio-classes .linha-dado {
+  display: flex;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.relatorio-classes .linha-header {
+  font-weight: bold;
+  background-color: #00796b;
+  color: white;
+}
+
+.relatorio-classes .linha-dado {
+  background-color: #f5f5f5;
+}
+
+.relatorio-classes .linha-dado:nth-child(even) {
+  background-color: #e0f2f1;
+}
+
+.relatorio-classes span {
+  flex: 1;
+  text-align: center;
+}
+
+.col-classe { flex: 2; text-align: left; }
+.col-iniciado, .col-concluido { flex: 1; }
+
+
+/* ============================= */
+/* Relatório de Patrimônio */
+.relatorio-patrimonio {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.relatorio-patrimonio .linha-header,
+.relatorio-patrimonio .linha-dado {
+  display: flex;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.relatorio-patrimonio .linha-header {
+  font-weight: bold;
+  background-color: #00796b;
+  color: white;
+}
+
+.relatorio-patrimonio .linha-dado {
+  background-color: #f5f5f5;
+}
+
+.relatorio-patrimonio .linha-dado:nth-child(even) {
+  background-color: #e0f2f1;
+}
+
+.relatorio-patrimonio span {
+  flex: 1;
+  text-align: left;
+}
+
+.col-item { flex: 2; }
+.col-quantidade { flex: 1; text-align: center; }
+.col-valor { flex: 1; text-align: right; }
+
+
+/* ============================= */
+/* Relatório Fluxo de Caixa */
+.relatorio-fluxo-caixa {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+  margin-left: 20px;
+}
+
+.relatorio-fluxo-caixa .linha-header,
+.relatorio-fluxo-caixa .linha-dado {
+  display: flex;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.relatorio-fluxo-caixa .linha-header {
+  font-weight: bold;
+  background-color: #00796b;
+  color: white;
+}
+
+.relatorio-fluxo-caixa .linha-dado {
+  background-color: #f5f5f5;
+}
+
+.relatorio-fluxo-caixa .linha-dado:nth-child(even) {
+  background-color: #e0f2f1;
+}
+
+.relatorio-fluxo-caixa span {
+  flex: 1;
+}
+
+.col-subplano { flex: 3; text-align: left; }
+.col-total { flex: 1; text-align: right; }
+
+
+
+/* ============================= */
+/* Relatório Mensalidades */
+.relatorio-mensalidades {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.relatorio-mensalidades .linha-header,
+.relatorio-mensalidades .linha-dado {
+  display: flex;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.relatorio-mensalidades .linha-header {
+  font-weight: bold;
+  background-color: #00796b;
+  color: white;
+}
+
+.relatorio-mensalidades .linha-dado {
+  background-color: #f5f5f5;
+}
+
+.relatorio-mensalidades .linha-dado:nth-child(even) {
+  background-color: #e0f2f1;
+}
+
+.relatorio-mensalidades span {
+  flex: 1;
+}
+
+.col-nome { flex: 3; text-align: left; }
+.col-data { flex: 2; text-align: center; }
+.col-valor { flex: 1; text-align: right; }
+
+
+
+/* ============================= */
+/* Relatório Autorizações */
+.relatorio-autorizacoes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.relatorio-autorizacoes .linha-header,
+.relatorio-autorizacoes .linha-dado {
+  display: flex;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.relatorio-autorizacoes .linha-header {
+  font-weight: bold;
+  background-color: #1976d2;
+  color: white;
+}
+
+.relatorio-autorizacoes .linha-dado {
+  background-color: #f5f5f5;
+}
+
+.relatorio-autorizacoes .linha-dado:nth-child(even) {
+  background-color: #e3f2fd;
+}
+
+.relatorio-autorizacoes span {
+  flex: 1;
+}
+
+.col-desbravador { flex: 2; text-align: left; }
+.col-autorizacao { flex: 2; text-align: left; }
+.col-data-inicio { flex: 1; text-align: center; }
+.col-data-fim { flex: 1; text-align: center; }

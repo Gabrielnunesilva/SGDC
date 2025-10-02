@@ -1,0 +1,109 @@
+/* =========================
+   Controle de Caixa - CSS
+   ========================= */
+
+/* Header da tela */
+.caixa-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.caixa-header h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.5em;
+}
+
+.caixa-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.caixa-header-actions span {
+  font-weight: bold;
+}
+
+/* Lista de lançamentos */
+#listaCaixa {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Cada item de lançamento */
+.caixa-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Coluna da informação: descrição, valor, plano */
+.caixa-info {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* Estilo de cada span dentro da info */
+.caixa-info .descricao {
+  min-width: 150px;
+  font-weight: 500;
+}
+
+.caixa-info .valor {
+  min-width: 80px;
+  color: #007700;
+  font-weight: bold;
+}
+
+.caixa-info .plano {
+  min-width: 120px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Coluna de ações (botões) */
+.caixa-acoes {
+  display: flex;
+  gap: 6px;
+}
+
+/* Botões */
+
+/* Formulário */
+form#formCaixa {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 400px;
+}
+
+form#formCaixa label {
+  font-weight: bold;
+}
+
+form#formCaixa input,
+form#formCaixa select {
+  padding: 6px 8px;
+  font-size: 1em;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.botoes-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.valor-negativo {
+  color: red !important;
+  font-weight: bold;
+}
