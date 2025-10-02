@@ -1,0 +1,163 @@
+/* ===== Geral ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* ===== Menu Lateral ===== */
+.menu-lateral {
+  width: 220px;
+  background-color: #292B3A;
+  color: white;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative; /* importante para submenus absolutos */
+}
+
+/* Menu principal */
+.menu-opcao {
+  background-color: #2e303e;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box;
+  border-bottom: 1px solid #262732;
+  transition: background-color 0.3s;
+}
+
+.menu-opcao:hover,
+.menu-opcao.active {
+  background-color: #262732;
+}
+
+/* Submenus */
+.submenu {
+  max-height: 0;
+  background-color: #262732;
+  overflow: hidden;
+  flex-direction: column;
+  transition: max-height 0.8s ease;
+  position: relative; /* pode usar absolute se quiser flutuar sobre outros itens */
+  z-index: 1;
+}
+
+.submenu.show {
+  max-height: 500px;       /* altura máxima grande o suficiente para caber todos os links */
+}
+
+
+.submenu a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.3s;
+  border-bottom: 1px solid #262732;
+}
+
+.submenu a:hover {
+  background-color: #262732;
+}
+
+/* Área de conteúdo */
+.conteudo {
+  flex: 1;
+  padding: 30px;
+  background-color: #e0f2f1;
+  overflow-y: auto;
+}
+
+button {
+  border-radius: 12px;    /* cantos arredondados */
+  border: none;           /* remove a borda */
+  padding: 8px 12px;      /* espaçamento interno */
+  cursor: pointer;        /* muda o cursor ao passar por cima */
+  background-color: #00796b; /* cor padrão, você pode alterar */
+  color: white;           /* texto branco */
+  font-size: 14px;        /* tamanho do texto */
+  transition: 0.2s;       /* transição suave para hover */
+}
+
+button:hover {
+  background-color: #004d40; /* efeito hover */
+}
+
+button#btnCancelarAto,
+button#btnCancelarAta,
+button#btnCancelarCaixa,
+button#btnCancelarEspecialidade,
+button#btnCancelarPatrimonio,
+button#btnCancelarClasse,
+button#btnCancelarUnidade,
+button#btnCancelar:hover,
+button.cancelar:hover {
+  background-color: #888;
+}
+
+/* Botão Excluir */
+button#btnExcluir,
+button#btnExcluirCaixa,
+button#btnExcluirAto,
+button#btnExcluirAta,
+button#btnExcluirPlano,
+button#btnExcluirPatrimonio,
+button#btnExcluirUnidade,
+button#btnExcluirClasse,
+button#btnExcluirEspecialidade,
+button.excluir {    /* caso use classe 'excluir' */
+  background-color: #e53935;
+}
+
+button#btnExcluir:hover,
+button.excluir:hover {
+  background-color: #c62828;
+}
+
+/* ============================= */
+/* Formulário padrão */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+}
+
+form label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+form input, form select, form textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Espaço entre unidades, classes e especialidades */
+#listaUnidades .desbravador-item,
+#listaClasses .desbravador-item,
+#listaEspecialidades .desbravador-item {
+  margin-bottom: 10px;
+}
+

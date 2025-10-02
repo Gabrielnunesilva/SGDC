@@ -1,0 +1,79 @@
+/* Formulário específico para Atas/Atos */
+#formAta, #formAto {
+  display: flex !important;
+  flex-direction: column !important; /* força coluna */
+  gap: 12px;
+  max-width: 500px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#formAta label, #formAto label {
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+#formAta input,
+#formAta select,
+#formAta textarea,
+#formAto input,
+#formAto select,
+#formAto textarea {
+  width: 100% !important;
+  box-sizing: border-box;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#formAta textarea,
+#formAto textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.botoes-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.relatorio-atas-atos {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.relatorio-atas-atos .linha-header,
+.relatorio-atas-atos .linha-dado {
+  display: flex;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.relatorio-atas-atos .linha-header {
+  font-weight: bold;
+  background-color: #00796b;
+  color: white;
+}
+
+.relatorio-atas-atos .linha-dado {
+  background-color: #f5f5f5;
+}
+
+.relatorio-atas-atos .linha-dado:nth-child(even) {
+  background-color: #e0f2f1;
+}
+
+.relatorio-atas-atos span {
+  flex: 1;
+}
+
+.col-titulo { flex: 3; }
+.col-data { flex: 1; text-align: center; }

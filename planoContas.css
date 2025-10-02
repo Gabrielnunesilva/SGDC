@@ -1,0 +1,168 @@
+/* Container principal */
+#areaConteudo {
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header com botão adicionar */
+.desbravadores-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.desbravadores-header button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #00796b;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.desbravadores-header button:hover {
+  background-color: #004d40;
+}
+
+/* Lista de planos */
+#listaPlanos {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Cada item da lista */
+.desbravador-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  font-size: 14px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.desbravador-item span {
+  flex-grow: 1;
+}
+
+/* Botão editar */
+.desbravador-item button {
+  margin-left: 10px;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #00796b;
+  color: white;
+  transition: 0.2s;
+}
+
+.desbravador-item button:hover {
+  background-color: #004d40;
+}
+
+/* Botão expand/collapse [+/-] */
+.toggle-subplanos {
+  margin-right: 8px;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: #aaa;
+  color: white;
+}
+
+.toggle-subplanos:hover {
+  background-color: #888;
+}
+
+/* Subplanos indentados */
+.subplanos {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  gap: 4px;
+}
+
+/* Cores de background */
+.receita {
+  background-color: #d0f0c0;
+}
+
+.despesa {
+  background-color: #f9d0d0;
+}
+
+/* Formulário plano de contas */
+#formPlanoConta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#formPlanoConta input,
+#formPlanoConta select,
+#formPlanoConta button {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Botões do formulário */
+#formPlanoConta button {
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+
+#formPlanoConta button[type="submit"] {
+  background-color: #00796b;
+}
+
+#formPlanoConta button[type="submit"]:hover {
+  background-color: #004d40;
+}
+
+#btnCancelarPlano {
+  background-color: #aaa;
+}
+
+#btnCancelarPlano:hover {
+  background-color: #888;
+}
+
+#btnExcluirPlano {
+  background-color: #e53935;
+}
+
+#btnExcluirPlano:hover {
+  background-color: #b71c1c;
+}
+
+/* Label do formulário */
+#formPlanoConta label {
+  font-weight: 500;
+}
+
+/* Botões do formulário alinhados à direita */
+.botoes-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}

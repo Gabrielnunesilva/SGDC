@@ -1,0 +1,243 @@
+/* ============================= */
+/* Área principal do Desbravadores */
+/* ============================= */
+#areaConteudo {
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ============================= */
+/* Header com filtro e botão adicionar */
+/* ============================= */
+.desbravadores-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.desbravadores-header select,
+.desbravadores-header button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background-color: #fff;
+  transition: 0.2s;
+}
+
+.desbravadores-header select:hover,
+.desbravadores-header button:hover {
+  border-color: #00796b;
+}
+
+.desbravadores-header button {
+  background-color: #00796b;
+  color: white;
+  border: none;
+}
+
+.desbravadores-header button:hover {
+  background-color: #004d40;
+}
+
+/* ============================= */
+/* Lista de Desbravadores */
+/* ============================= */
+#listaDesbravadores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Lista de Desbravadores */
+
+.desbravador-item {
+  display: flex;
+  justify-content: space-between; /* mantém o nome à esquerda e o status à direita */
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  font-size: 14px;
+  cursor: pointer;
+  gap: 10px; /* espaço entre nome e status */
+}
+
+.desbravador-item span.nome {
+  flex: 1; /* ocupa o espaço restante */
+}
+
+.desbravador-item span.status {
+  width: 80px;      /* largura fixa para todos os status */
+  text-align: right; /* força o texto para o canto direito */
+}
+
+
+.desbravador-item:hover {
+  background-color: #e0f2f1;
+}
+
+/* ============================= */
+/* Formulário Completo com Abas */
+/* ============================= */
+.container-desbravador {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Menu lateral interno (abas) */
+.menu-desbravador {
+  width: 180px;
+  background: #f1f1f1;
+  border-left: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-top: 10px; /* para ficar alinhado ao conteúdo */
+}
+
+.aba-desbravador {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+.aba-desbravador:hover {
+  background-color: #e0e0e0;
+}
+
+.aba-desbravador.active {
+  background: #1976d2;
+  color: white;
+  font-weight: bold;
+}
+
+/* Conteúdo da aba */
+.conteudo-desbravador {
+  flex: 1;
+  padding: 0 20px 20px 0;
+}
+
+/* ============================= */
+/* Formulário de Informações Gerais (grid) */
+/* ============================= */
+form#formDesbravadorCompleto .linha {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+form#formDesbravadorCompleto .campo {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+form#formDesbravadorCompleto .campo-pequeno {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Inputs, selects e botões do formulário */
+#formDesbravadorCompleto input,
+#formDesbravadorCompleto select {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#formDesbravadorCompleto button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#formDesbravadorCompleto button[type="submit"] {
+  background-color: #00796b;
+}
+
+#formDesbravadorCompleto button[type="submit"]:hover {
+  background-color: #004d40;
+}
+
+#formDesbravadorCompleto button#btnCancelar {
+  background-color: #aaa;
+}
+
+#formDesbravadorCompleto button#btnCancelar:hover {
+  background-color: #888;
+}
+
+#formDesbravadorCompleto button#btnExcluir {
+  background-color: #e53935;
+}
+
+#formDesbravadorCompleto button#btnExcluir:hover {
+  background-color: #c62828;
+}
+
+/* Container dos botões */
+.botoes-form {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ============================= */
+/* Financeiro */
+/* ============================= */
+.financeiro-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.financeiro-header button {
+  padding: 6px 12px;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.financeiro-header button:hover {
+  background-color: #004d40;
+}
+
+.lancamento-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+.lancamento-item button {
+  margin-left: 10px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: #e53935;
+  color: white;
+  cursor: pointer;
+}
+
+.lancamento-item button:hover {
+  background-color: #c62828;
+}
