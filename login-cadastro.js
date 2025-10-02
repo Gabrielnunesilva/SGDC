@@ -26,8 +26,8 @@ if(loginForm){
 
   cadastrarLink.addEventListener('click', (e) => {
     e.preventDefault();
-    window.location.href = "./cadastro.html";
-  });
+    window.location.href = window.location.origin + "/SGDC/cadastro.html";
+});
 }
 
 // ===== CADASTRO =====
@@ -65,4 +65,5 @@ if(cadastroForm){
     window.location.href = "login.html";
   });
 }
+
 
