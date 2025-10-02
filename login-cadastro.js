@@ -19,7 +19,7 @@ if (loginForm) {
     if (usuarioEncontrado) {
       localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
       // Redirecionamento absoluto para GitHub Pages
-      window.location.href = "/SGDC/sistema.html";
+      window.location.href = "sistema.html";
     } else {
       mensagemErro.textContent = "Email ou senha inválido";
     }
@@ -56,6 +56,7 @@ if (cadastroForm) {
 
     alert("Cadastro realizado com sucesso!");
     // Redirecionamento absoluto para GitHub Pages
-    window.location.href = "/SGDC/login.html";
+    window.location.href = "login.html";
   });
 }
+
