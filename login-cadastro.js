@@ -26,7 +26,7 @@ if(loginForm){
 
   cadastrarLink.addEventListener('click', (e) => {
     e.preventDefault();
-    window.location.href = "cadastro.html";
+    window.location.href = "./cadastro.html";
   });
 }
 
@@ -65,3 +65,4 @@ if(cadastroForm){
     window.location.href = "login.html";
   });
 }
+
