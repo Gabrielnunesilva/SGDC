@@ -1,7 +1,7 @@
 // ===== LOGIN =====
 const loginForm = document.getElementById('loginForm');
 
-if(loginForm){
+if (loginForm) {
   const mensagemErro = document.getElementById('mensagemErro');
 
   loginForm.addEventListener('submit', (e) => {
@@ -12,54 +12,50 @@ if(loginForm){
 
     const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
 
-    const usuarioEncontrado = usuarios.find(u => u.email === email && u.senha === senha);
+    const usuarioEncontrado = usuarios.find(
+      (u) => u.email === email && u.senha === senha
+    );
 
-    if(usuarioEncontrado){
+    if (usuarioEncontrado) {
       localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado));
-      window.location.href = "sistema.html";
+      // Redirecionamento absoluto para GitHub Pages
+      window.location.href = "/SGDC/sistema.html";
     } else {
-      // Mostra a mensagem de erro na tela
-      mensagemErro.textContent = 'Email ou senha inválido';
+      mensagemErro.textContent = "Email ou senha inválido";
     }
   });
-
 }
 
 // ===== CADASTRO =====
 const cadastroForm = document.getElementById('cadastroForm');
 
-if(cadastroForm){
-  cadastroForm.addEventListener('submit', (e) => {
+if (cadastroForm) {
+  cadastroForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const senha = document.getElementById('senha').value;
-    const confirmarSenha = document.getElementById('confirmarSenha').value;
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+    const confirmarSenha = document.getElementById("confirmarSenha").value;
 
-    if(senha !== confirmarSenha){
-      alert('As senhas não coincidem!');
+    if (senha !== confirmarSenha) {
+      alert("As senhas não coincidem!");
       return;
     }
 
-    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    // Verifica se email já está cadastrado
-    const existe = usuarios.some(u => u.email === email);
-    if(existe){
-      alert('Este email já está cadastrado!');
+    const existe = usuarios.some((u) => u.email === email);
+    if (existe) {
+      alert("Este email já está cadastrado!");
       return;
     }
 
-    // Adiciona novo usuário
-    usuarios.push({nome, email, senha});
-    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+    usuarios.push({ nome, email, senha });
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-    alert('Cadastro realizado com sucesso!');
-    // Redireciona para login
-    window.location.href = "login.html";
+    alert("Cadastro realizado com sucesso!");
+    // Redirecionamento absoluto para GitHub Pages
+    window.location.href = "/SGDC/login.html";
   });
 }
-
-
-
