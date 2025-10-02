@@ -1,6 +1,5 @@
 // ===== LOGIN =====
 const loginForm = document.getElementById('loginForm');
-const cadastrarLink = document.getElementById('cadastrarLink');
 
 if(loginForm){
   const mensagemErro = document.getElementById('mensagemErro');
@@ -24,10 +23,6 @@ if(loginForm){
     }
   });
 
-  cadastrarLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.location.href = window.location.origin + "/SGDC/cadastro.html";
-});
 }
 
 // ===== CADASTRO =====
@@ -65,5 +60,6 @@ if(cadastroForm){
     window.location.href = "login.html";
   });
 }
+
 
 
